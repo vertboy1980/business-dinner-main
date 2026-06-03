@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\BlakeNoble_0crj0xx\\\\Documents\\\\git\\\\business-dinner-main\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\BlakeNoble_0crj0xx\\\\Documents\\\\git\\\\business-dinner-main\\\\bizdinner\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\BlakeNoble_0crj0xx\\\\Documents\\\\git\\\\business-dinner-main\\\\bizdinner\" log --oneline -3)"
+    ]
+  }
+}

@@ -87,15 +87,21 @@ a:hover { text-decoration: underline; }
   font-size: 1.05rem;
 }
 .brand:hover { text-decoration: none; }
-.brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 34px; height: 34px;
-  border: 1.5px solid var(--ink);
-  border-radius: 50%;
-  font-family: var(--serif);
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
+}
+.brand-name {
+  font-size: 1.3rem;
+}
+.brand-est {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  align-self: flex-end;
+  padding-bottom: 2px;
 }
 .nav-menu {
   display: flex;
@@ -148,7 +154,7 @@ a:hover { text-decoration: underline; }
   z-index: -1;
   background:
     linear-gradient(180deg, rgba(22,17,13,0.55) 0%, rgba(22,17,13,0.75) 60%, rgba(22,17,13,0.92) 100%),
-    url('https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2000&q=70') center/cover no-repeat,
+    url('https://images.unsplash.com/photo-1515248027005-c33283ec3fba?auto=format&fit=crop&w=2000&q=70') center/cover no-repeat,
     #16110d;
 }
 .hero-inner {
@@ -246,6 +252,23 @@ figcaption {
   font-style: italic;
 }
 
+/* Audience */
+.section-audience {
+  background: var(--cream);
+  max-width: 100%;
+  padding: 6rem 1.5rem;
+}
+.audience-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.audience-lede {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
 /* Guests */
 .guests-grid {
   display: grid;
@@ -288,6 +311,16 @@ figcaption {
 }
 
 /* Venue */
+.venue-logo {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+.venue-logo img {
+  max-width: 160px;
+  height: auto;
+  opacity: 0.85;
+}
+
 address {
   font-style: normal;
   color: var(--ink-soft);
@@ -322,8 +355,29 @@ address {
 .next-card > * { position: relative; z-index: 1; }
 .next-card h2 { color: var(--cream); font-size: clamp(2rem, 4vw, 3rem); }
 .next-card p { color: var(--cream-deep); }
-.next-guest { font-size: 1.1rem; margin-bottom: 1.8rem; }
+.next-guest { font-size: 1.1rem; margin-bottom: 0.4rem; }
 .next-guest strong { color: var(--gold); font-style: italic; font-family: var(--serif); }
+.next-guest-block {
+  display: flex;
+  gap: 1.4rem;
+  align-items: flex-start;
+  margin-bottom: 1.8rem;
+}
+.next-guest-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  border: 2px solid rgba(176, 138, 62, 0.4);
+}
+.next-guest-bio {
+  font-size: 0.92rem;
+  color: rgba(236, 226, 207, 0.75);
+  margin: 0;
+  line-height: 1.55;
+}
 .next-details {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -736,7 +790,6 @@ address {
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-.footer .brand-mark { border-color: var(--cream-deep); color: var(--cream); }
 .footer p { margin: 0; color: var(--cream-deep); font-size: 0.9rem; }
 .footer .small { margin-left: auto; font-size: 0.8rem; color: rgba(236, 226, 207, 0.6); }
 

@@ -494,6 +494,7 @@ address {
   margin-top: 0.3rem;
 }
 .btn-block { display: block; width: 100%; text-align: center; }
+stripe-buy-button { display: block; text-align: center; }
 .ticket-note {
   margin: 1rem 0 0;
   font-size: 0.8rem;

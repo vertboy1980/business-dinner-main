@@ -29,7 +29,9 @@
       "WebFetch(domain:businessnz.org.nz)",
       "WebFetch(domain:www.police.vic.gov.au)",
       "WebFetch(domain:www.opencountrydairy.com)",
-      "WebFetch(domain:www.interest.co.nz)"
+      "WebFetch(domain:www.interest.co.nz)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget"
     ]
   }
 }

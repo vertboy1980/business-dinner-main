@@ -108,6 +108,9 @@ a:hover { text-decoration: underline; }
 .brand-name {
   font-size: 1.3rem;
   color: var(--cream);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 .brand-est {
   font-family: var(--sans);

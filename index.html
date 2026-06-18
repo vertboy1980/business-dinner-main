@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
   <header class="nav">
@@ -101,7 +102,10 @@
           <div><dt>Where</dt><dd>Non Solo Pizza, Parnell</dd></div>
           <div><dt>Dress</dt><dd>Smart casual</dd></div>
         </dl>
-        <button type="button" class="btn btn-primary" data-checkout-open>Reserve a seat — NZ$120</button>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1TjWjZRNEqqBku9GDWO69izs"
+          publishable-key="pk_live_51TjUptRNEqqBku9GfmJ4UloqOOmzxFVdqgQeGSjVL3p7qVLeUNRX58B8unqSL1vuwow57xdDeYZWFNehiiwF1wfi00OcyrXzJY">
+        </stripe-buy-button>
       </div>
     </section>
 
@@ -194,101 +198,15 @@
               <span class="per">per seat</span>
             </div>
           </div>
-          <button type="button" class="btn btn-primary btn-block" data-checkout-open>Reserve a seat</button>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1TjWjZRNEqqBku9GDWO69izs"
+            publishable-key="pk_live_51TjUptRNEqqBku9GfmJ4UloqOOmzxFVdqgQeGSjVL3p7qVLeUNRX58B8unqSL1vuwow57xdDeYZWFNehiiwF1wfi00OcyrXzJY">
+          </stripe-buy-button>
           <p class="ticket-note">Secure checkout via Stripe. You can cancel up to 7 days before the dinner for a full refund.</p>
         </div>
       </div>
     </section>
   </main>
-
-  <!--
-    Mock Stripe Checkout modal. When you have a real Stripe account in test mode,
-    replace this whole block with the Stripe Buy Button web component:
-
-      <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-      <stripe-buy-button
-        buy-button-id="buy_btn_xxx"
-        publishable-key="pk_test_xxx">
-      </stripe-buy-button>
-  -->
-  <div class="checkout-modal" id="checkout-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
-    <div class="checkout-backdrop" data-checkout-close></div>
-    <div class="checkout-card" role="document">
-      <button class="checkout-close" type="button" data-checkout-close aria-label="Close">&times;</button>
-
-      <div class="checkout-summary">
-        <div class="merchant">
-          <img src="assets/NSP logo.png" alt="Non Solo Pizza" class="brand-logo" style="width:28px;height:28px;object-fit:contain;border-radius:50%;" />
-          <span class="merchant-name">The Long Table</span>
-          <span class="test-badge">TEST MODE</span>
-        </div>
-        <p class="summary-label">Reserve a seat</p>
-        <p class="summary-amount">NZ$120.00</p>
-        <ul class="summary-lines">
-          <li><span>The Long Table · 13 August</span><span>NZ$120.00</span></li>
-          <li class="muted"><span>Non Solo Pizza, Parnell</span><span></span></li>
-        </ul>
-        <div class="summary-total">
-          <span>Total due</span>
-          <span>NZ$120.00</span>
-        </div>
-      </div>
-
-      <form class="checkout-form" id="checkout-form" novalidate>
-        <h2 id="checkout-title">Pay with card</h2>
-        <p class="test-hint">Test mode — use card <code>4242 4242 4242 4242</code>, any future expiry, any CVC.</p>
-
-        <label class="field">
-          <span>Email</span>
-          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
-        </label>
-
-        <label class="field">
-          <span>Card information</span>
-          <div class="card-group">
-            <input type="text" name="card" inputmode="numeric" required placeholder="1234 1234 1234 1234" autocomplete="cc-number" maxlength="19" />
-            <div class="card-row">
-              <input type="text" name="exp" inputmode="numeric" required placeholder="MM / YY" autocomplete="cc-exp" maxlength="7" />
-              <input type="text" name="cvc" inputmode="numeric" required placeholder="CVC" autocomplete="cc-csc" maxlength="4" />
-            </div>
-          </div>
-        </label>
-
-        <label class="field">
-          <span>Cardholder name</span>
-          <input type="text" name="name" required autocomplete="cc-name" placeholder="Full name on card" />
-        </label>
-
-        <label class="field">
-          <span>Country</span>
-          <select name="country" required>
-            <option value="NZ" selected>New Zealand</option>
-            <option value="AU">Australia</option>
-            <option value="US">United States</option>
-            <option value="GB">United Kingdom</option>
-          </select>
-        </label>
-
-        <button type="submit" class="checkout-pay">
-          <span class="pay-label">Pay NZ$120.00</span>
-          <span class="pay-spinner" aria-hidden="true"></span>
-        </button>
-
-        <p class="powered">
-          Powered by <strong>stripe</strong> · <a href="#">Terms</a> · <a href="#">Privacy</a>
-        </p>
-      </form>
-
-      <div class="checkout-success" hidden>
-        <div class="success-check" aria-hidden="true">
-          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27 L23 36 L39 18"/></svg>
-        </div>
-        <h2>Payment received</h2>
-        <p>Thanks — your seat is reserved. A confirmation is on its way to your inbox.</p>
-        <button type="button" class="btn btn-primary" data-checkout-close>Close</button>
-      </div>
-    </div>
-  </div>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -313,66 +231,6 @@
       toggle.setAttribute('aria-expanded', 'false');
     }));
 
-    // Mock Stripe checkout modal
-    const modal = document.getElementById('checkout-modal');
-    const form = document.getElementById('checkout-form');
-    const success = modal.querySelector('.checkout-success');
-    const payBtn = modal.querySelector('.checkout-pay');
-
-    const openModal = () => {
-      modal.hidden = false;
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      requestAnimationFrame(() => modal.classList.add('open'));
-    };
-    const closeModal = () => {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      setTimeout(() => {
-        modal.hidden = true;
-        form.hidden = false;
-        success.hidden = true;
-        payBtn.classList.remove('loading');
-        form.reset();
-      }, 200);
-    };
-
-    document.querySelectorAll('[data-checkout-open]').forEach(el =>
-      el.addEventListener('click', openModal)
-    );
-    document.querySelectorAll('[data-checkout-close]').forEach(el =>
-      el.addEventListener('click', closeModal)
-    );
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && !modal.hidden) closeModal();
-    });
-
-    // Light formatting on the card fields (cosmetic only)
-    const cardInput = form.querySelector('input[name="card"]');
-    cardInput.addEventListener('input', () => {
-      const digits = cardInput.value.replace(/\D/g, '').slice(0, 16);
-      cardInput.value = digits.replace(/(.{4})/g, '$1 ').trim();
-    });
-    const expInput = form.querySelector('input[name="exp"]');
-    expInput.addEventListener('input', () => {
-      const digits = expInput.value.replace(/\D/g, '').slice(0, 4);
-      expInput.value = digits.length > 2 ? digits.slice(0, 2) + ' / ' + digits.slice(2) : digits;
-    });
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      payBtn.classList.add('loading');
-      payBtn.disabled = true;
-      // Simulate a Stripe round-trip
-      setTimeout(() => {
-        form.hidden = true;
-        success.hidden = false;
-        payBtn.classList.remove('loading');
-        payBtn.disabled = false;
-      }, 1400);
-    });
   </script>
 </body>
 </html>

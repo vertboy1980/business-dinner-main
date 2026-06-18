@@ -426,30 +426,32 @@ figcaption {
   gap: 1.5rem;
 }
 .guest-card {
-  background: var(--cream);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  overflow: hidden;
+  background: transparent;
+  border: none;
   padding-bottom: 1.2rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 .guest-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow);
 }
 .guest-card img {
-  width: 100%;
+  width: 140px;
+  height: 140px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: top center;
   display: block;
-  filter: grayscale(0.15);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--gold);
   background: var(--cream-deep);
 }
-.guest-card h3 { margin: 1rem 1.2rem 0.2rem; font-size: 1.1rem; }
+.guest-card h3 { margin: 0 0 0.3rem; font-size: 1.05rem; }
 .guest-card .role {
-  margin: 0 1.2rem 0.8rem;
+  margin: 0;
   color: var(--ink-soft);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 .guest-card .quote {
   margin: 0 1.2rem;

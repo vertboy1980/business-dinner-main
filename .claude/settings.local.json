@@ -31,7 +31,10 @@
       "WebFetch(domain:www.opencountrydairy.com)",
       "WebFetch(domain:www.interest.co.nz)",
       "mcp__visualize__read_me",
-      "mcp__visualize__show_widget"
+      "mcp__visualize__show_widget",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }

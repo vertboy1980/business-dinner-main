@@ -13,7 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
+  <!-- RSVP/payments temporarily hidden: Stripe script
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  -->
 </head>
 <body>
   <header class="nav">
@@ -44,7 +46,9 @@
       <a href="#guests">Past guests</a>
       <a href="#venue">Venue</a>
       <a href="#next">Next dinner</a>
+      <!-- RSVP/payments temporarily hidden: nav link
       <a href="#rsvp" class="nav-cta">RSVP</a>
+      -->
     </nav>
   </header>
 
@@ -58,7 +62,9 @@
         <p class="hero-sub">It's just dinner. Except it never really is.</p>
         <p class="lede">The Long Table is a private dinner for a small, invited group of New Zealand's business owners, leaders and professionals. A few times a year, we sit down with one interesting guest — and see where the conversation goes.</p>
         <div class="hero-actions">
+          <!-- RSVP/payments temporarily hidden: hero button
           <a href="#rsvp" class="btn btn-primary">Reserve a seat</a>
+          -->
           <a href="#about" class="btn btn-ghost">Format</a>
         </div>
       </div>
@@ -136,10 +142,12 @@
           <div><dt>Where</dt><dd>Non Solo Pizza, Parnell</dd></div>
           <div><dt>Dress</dt><dd>Smart casual</dd></div>
         </dl>
+        <!-- RSVP/payments temporarily hidden: next dinner buy button
         <stripe-buy-button
           buy-button-id="buy_btn_1TjWjZRNEqqBku9GDWO69izs"
           publishable-key="pk_live_51TjUptRNEqqBku9GfmJ4UloqOOmzxFVdqgQeGSjVL3p7qVLeUNRX58B8unqSL1vuwow57xdDeYZWFNehiiwF1wfi00OcyrXzJY">
         </stripe-buy-button>
+        -->
       </div>
     </section>
 
@@ -226,6 +234,7 @@
       </div>
     </section>
 
+    <!-- RSVP/payments temporarily hidden: RSVP section
     <section id="rsvp" class="section section-rsvp">
       <div class="rsvp-inner">
         <p class="kicker">RSVP</p>
@@ -250,6 +259,7 @@
         </div>
       </div>
     </section>
+    -->
   </main>
 
   <footer class="footer">

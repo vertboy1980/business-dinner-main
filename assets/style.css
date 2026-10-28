@@ -422,9 +422,11 @@ figcaption {
 /* Guests */
 .guests-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 1.5rem;
 }
+.guests-grid .guest-card { grid-column: span 2; }
+.guests-grid .guest-card:nth-child(7) { grid-column: 2 / span 2; }
 .guest-card {
   background: transparent;
   border: none;
@@ -985,6 +987,8 @@ stripe-buy-button { display: block; text-align: center; }
   .grid-reverse .col-image { order: 0; }
 
   .guests-grid { grid-template-columns: repeat(2, 1fr); }
+  .guests-grid .guest-card,
+  .guests-grid .guest-card:nth-child(7) { grid-column: auto; }
 
   .next-card { padding: 2.2rem 1.6rem; }
   .next-details { grid-template-columns: repeat(2, 1fr); }
